@@ -27,4 +27,7 @@ It allows users to select movies, theatres, shows and seats.
 Academic Mini Project
 
 ## Developed By
+
+Karan A Sarade
+
 Computer Engineering Students
