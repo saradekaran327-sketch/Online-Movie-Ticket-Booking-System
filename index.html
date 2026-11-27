@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Movie Ticket Booking System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        🎬 MovieBook
+    </div>
+
+    <nav>
+        <a href="#movies">Movies</a>
+        <a href="#theatres">Theatres</a>
+        <a href="#shows">Shows</a>
+        <a href="#booking">Booking</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= BOOKING STEPS ================= -->
+
+<section class="booking-steps">
+
+    <div class="step active" id="stepMovie">
+        <span>1</span>
+        <p>Movie</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="step" id="stepTheatre">
+        <span>2</span>
+        <p>Theatre</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="step" id="stepShow">
+        <span>3</span>
+        <p>Show</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="step" id="stepSeats">
+        <span>4</span>
+        <p>Seats</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="step" id="stepBooking">
+        <span>5</span>
+        <p>Confirm</p>
+    </div>
+
+</section>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Online Movie Ticket Booking</h1>
+
+        <p>
+            Book your favourite movie, theatre, show and seats easily.
+        </p>
+
+        <a href="#movies" class="hero-button">
+            Book Ticket
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MOVIES ================= -->
+
+<section id="movies" class="section">
+
+    <div class="section-title">
+
+        <h2>🎬 Select Movie</h2>
+
+        <p>
+            Choose your favourite movie from the list below.
+        </p>
+
+    </div>
+
+
+    <div class="movie-grid">
+
+
+        <!-- Avatar -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="images/avatar.jpg"
+                    alt="Avatar"
+                    onerror="imageError(this, 'Avatar')"
+                >
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3>Avatar</h3>
+
+                <p>Genre: Action</p>
+
+                <p>Duration: 162 Minutes</p>
+
+                <p>⭐ Rating: 4.5 / 5</p>
+
+                <p class="price">
+                    Ticket Price: ₹200
+                </p>
+
+                <button onclick="selectMovie('Avatar')">
+                    Select Movie
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Avengers -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="images/avengers.jpg"
+                    alt="Avengers"
+                    onerror="imageError(this, 'Avengers')"
+                >
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3>Avengers</h3>
+
+                <p>Genre: Action</p>
+
+                <p>Duration: 181 Minutes</p>
+
+                <p>⭐ Rating: 4.3 / 5</p>
+
+                <p class="price">
+                    Ticket Price: ₹220
+                </p>
+
+                <button onclick="selectMovie('Avengers')">
+                    Select Movie
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Dangal -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="images/dangal.jpg"
+                    alt="Dangal"
+                    onerror="imageError(this, 'Dangal')"
+                >
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3>Dangal</h3>
+
+                <p>Genre: Drama</p>
+
+                <p>Duration: 161 Minutes</p>
+
+                <p>⭐ Rating: 4.6 / 5</p>
+
+                <p class="price">
+                    Ticket Price: ₹180
+                </p>
+
+                <button onclick="selectMovie('Dangal')">
+                    Select Movie
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- KGF -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="images/kgf.jpg"
+                    alt="KGF"
+                    onerror="imageError(this, 'KGF')"
+                >
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3>KGF</h3>
+
+                <p>Genre: Action</p>
+
+                <p>Duration: 168 Minutes</p>
+
+                <p>⭐ Rating: 4.4 / 5</p>
+
+                <p class="price">
+                    Ticket Price: ₹200
+                </p>
+
+                <button onclick="selectMovie('KGF')">
+                    Select Movie
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 Idiots -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="images/3idiots.jpg"
+                    alt="3 Idiots"
+                    onerror="imageError(this, '3 Idiots')"
+                >
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3>3 Idiots</h3>
+
+                <p>Genre: Comedy</p>
+
+                <p>Duration: 170 Minutes</p>
+
+                <p>⭐ Rating: 4.7 / 5</p>
+
+                <p class="price">
+                    Ticket Price: ₹150
+                </p>
+
+                <button onclick="selectMovie('3 Idiots')">
+                    Select Movie
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Pushpa -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="images/pushpa.jpg"
+                    alt="Pushpa"
+                    onerror="imageError(this, 'Pushpa')"
+                >
+
+            </div>
+
+            <div class="movie-info">
+
+                <h3>Pushpa</h3>
+
+                <p>Genre: Action</p>
+
+                <p>Duration: 179 Minutes</p>
+
+                <p>⭐ Rating: 4.1 / 5</p>
+
+                <p class="price">
+                    Ticket Price: ₹180
+                </p>
+
+                <button onclick="selectMovie('Pushpa')">
+                    Select Movie
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SELECTED MOVIE ================= -->
+
+<section class="selection-summary">
+
+    <h3>Selected Movie</h3>
+
+    <p id="selectedMovie">
+        Please select a movie
+    </p>
+
+</section>
+
+
+<!-- ================= THEATRES ================= -->
+
+<section id="theatres" class="section">
+
+    <div class="section-title">
+
+        <h2>🏢 Select Theatre</h2>
+
+        <p>
+            Select a theatre in Pune.
+        </p>
+
+    </div>
+
+
+    <div class="theatre-grid">
+
+
+        <!-- PVR -->
+
+        <div class="theatre-card theatre-pvr">
+
+            <div class="theatre-poster">
+
+                <div class="theatre-icon">🎬</div>
+
+                <h3>PVR</h3>
+
+                <p>Phoenix Market City</p>
+
+            </div>
+
+            <div class="theatre-info">
+
+                <h3>PVR Phoenix Market City</h3>
+
+                <p>📍 Pune</p>
+
+                <p>Screen No: 1</p>
+
+                <button onclick="selectTheatre('PVR Phoenix Market City')">
+                    Select Theatre
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- INOX -->
+
+        <div class="theatre-card theatre-inox">
+
+            <div class="theatre-poster">
+
+                <div class="theatre-icon">🎥</div>
+
+                <h3>INOX</h3>
+
+                <p>Bund Garden</p>
+
+            </div>
+
+            <div class="theatre-info">
+
+                <h3>INOX Bund Garden</h3>
+
+                <p>📍 Pune</p>
+
+                <p>Screen No: 2</p>
+
+                <button onclick="selectTheatre('INOX Bund Garden')">
+                    Select Theatre
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CINEPOLIS -->
+
+        <div class="theatre-card theatre-cinepolis">
+
+            <div class="theatre-poster">
+
+                <div class="theatre-icon">🍿</div>
+
+                <h3>CINEPOLIS</h3>
+
+                <p>Seasons Mall</p>
+
+            </div>
+
+            <div class="theatre-info">
+
+                <h3>Cinepolis Seasons Mall</h3>
+
+                <p>📍 Pune</p>
+
+                <p>Screen No: 3</p>
+
+                <button onclick="selectTheatre('Cinepolis Seasons Mall')">
+                    Select Theatre
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CITY PRIDE -->
+
+        <div class="theatre-card theatre-city">
+
+            <div class="theatre-poster">
+
+                <div class="theatre-icon">🎞️</div>
+
+                <h3>CITY PRIDE</h3>
+
+                <p>Kothrud</p>
+
+            </div>
+
+            <div class="theatre-info">
+
+                <h3>City Pride Kothrud</h3>
+
+                <p>📍 Pune</p>
+
+                <p>Screen No: 4</p>
+
+                <button onclick="selectTheatre('City Pride Kothrud')">
+                    Select Theatre
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SELECTED THEATRE ================= -->
+
+<section class="selection-summary">
+
+    <h3>Selected Theatre</h3>
+
+    <p id="selectedTheatre">
+        Please select a theatre
+    </p>
+
+</section>
+
+
+<!-- ================= SHOWS ================= -->
+
+<section id="shows" class="section">
+
+    <div class="section-title">
+
+        <h2>🕐 Select Show</h2>
+
+        <p>
+            Select your preferred show time.
+        </p>
+
+    </div>
+
+
+    <div class="show-container">
+
+
+        <div class="show-card">
+
+            <h3>Morning Show</h3>
+
+            <p>20-08-2026</p>
+
+            <button onclick="selectShow('10:00 AM')">
+                10:00 AM
+            </button>
+
+        </div>
+
+
+        <div class="show-card">
+
+            <h3>Afternoon Show</h3>
+
+            <p>20-08-2026</p>
+
+            <button onclick="selectShow('01:00 PM')">
+                01:00 PM
+            </button>
+
+        </div>
+
+
+        <div class="show-card">
+
+            <h3>Evening Show</h3>
+
+            <p>20-08-2026</p>
+
+            <button onclick="selectShow('04:00 PM')">
+                04:00 PM
+            </button>
+
+        </div>
+
+
+        <div class="show-card">
+
+            <h3>Night Show</h3>
+
+            <p>20-08-2026</p>
+
+            <button onclick="selectShow('07:00 PM')">
+                07:00 PM
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SELECTED SHOW ================= -->
+
+<section class="selection-summary">
+
+    <h3>Selected Show</h3>
+
+    <p id="selectedShow">
+        Please select a show
+    </p>
+
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section id="booking" class="section">
+
+    <div class="section-title">
+
+        <h2>💺 Select Your Seats</h2>
+
+        <p>
+            Green = Available |
+            Red = Selected |
+            Grey = Booked
+        </p>
+
+    </div>
+
+
+    <!-- SCREEN -->
+
+    <div class="screen">
+        SCREEN
+    </div>
+
+
+    <!-- REGULAR -->
+
+    <div class="seat-area">
+
+        <h3 class="seat-heading">
+            Regular Seats - ₹199
+        </h3>
+
+        <div class="seat-container">
+
+            <button class="seat">A1</button>
+            <button class="seat">A2</button>
+            <button class="seat booked">A3</button>
+            <button class="seat">A4</button>
+            <button class="seat">A5</button>
+
+            <button class="seat">B1</button>
+            <button class="seat">B2</button>
+            <button class="seat booked">B3</button>
+            <button class="seat">B4</button>
+            <button class="seat">B5</button>
+
+        </div>
+
+
+        <!-- PREMIUM -->
+
+        <h3 class="seat-heading">
+            Premium Seats - ₹249
+        </h3>
+
+        <div class="seat-container">
+
+            <button class="seat">C1</button>
+            <button class="seat">C2</button>
+            <button class="seat booked">C3</button>
+            <button class="seat">C4</button>
+            <button class="seat">C5</button>
+
+        </div>
+
+
+        <!-- BALCONY -->
+
+        <h3 class="seat-heading balcony-heading">
+            BALCONY - ₹399
+        </h3>
+
+        <div class="seat-container">
+
+            <button class="seat">D1</button>
+            <button class="seat">D2</button>
+            <button class="seat">D3</button>
+            <button class="seat booked">D4</button>
+            <button class="seat">D5</button>
+
+            <button class="seat">E1</button>
+            <button class="seat">E2</button>
+            <button class="seat booked">E3</button>
+            <button class="seat">E4</button>
+            <button class="seat">E5</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SUMMARY ================= -->
+
+    <div class="booking-summary">
+
+        <h2>Booking Summary</h2>
+
+        <div class="summary-row">
+
+            <span>Movie:</span>
+
+            <strong id="summaryMovie">
+                Not Selected
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>Theatre:</span>
+
+            <strong id="summaryTheatre">
+                Not Selected
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>Show:</span>
+
+            <strong id="summaryShow">
+                Not Selected
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>Selected Seats:</span>
+
+            <strong id="selectedSeats">
+                None
+            </strong>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="price-row">
+
+            <span>Regular:</span>
+
+            <strong id="regularPrice">
+                0 × ₹199 = ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="price-row">
+
+            <span>Premium:</span>
+
+            <strong id="premiumPrice">
+                0 × ₹249 = ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="price-row">
+
+            <span>Balcony:</span>
+
+            <strong id="balconyPrice">
+                0 × ₹399 = ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="total-row">
+
+            <span>Total Amount:</span>
+
+            <strong>
+                ₹<span id="totalAmount">0</span>
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CUSTOMER ================= -->
+
+    <div class="customer-form">
+
+        <h2>👤 Customer Details</h2>
+
+        <div class="form-group">
+
+            <label for="customerName">
+                Customer Name
+            </label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="customerMobile">
+                Mobile Number
+            </label>
+
+            <input
+                type="text"
+                id="customerMobile"
+                placeholder="Enter 10 digit mobile number"
+                maxlength="10"
+            >
+
+        </div>
+
+
+        <button
+            class="confirm-button"
+            onclick="confirmBooking()"
+        >
+            Confirm Booking
+        </button>
+
+    </div>
+
+
+    <!-- ================= CONFIRMATION ================= -->
+
+    <div
+        id="confirmationBox"
+        class="confirmation-box"
+        style="display:none;"
+    >
+
+        <h2>🎉 Booking Confirmed!</h2>
+
+        <p>
+            Your movie ticket has been booked successfully.
+        </p>
+
+
+        <div class="ticket-details">
+
+            <p>
+                <strong>Customer Name:</strong>
+                <span id="confirmName"></span>
+            </p>
+
+            <p>
+                <strong>Mobile Number:</strong>
+                <span id="confirmMobile"></span>
+            </p>
+
+            <p>
+                <strong>Movie:</strong>
+                <span id="confirmMovie"></span>
+            </p>
+
+            <p>
+                <strong>Theatre:</strong>
+                <span id="confirmTheatre"></span>
+            </p>
+
+            <p>
+                <strong>Show Time:</strong>
+                <span id="confirmShow"></span>
+            </p>
+
+            <p>
+                <strong>Seats:</strong>
+                <span id="confirmSeats"></span>
+            </p>
+
+            <p>
+                <strong>Total Amount:</strong>
+                ₹<span id="confirmAmount"></span>
+            </p>
+
+        </div>
+
+
+        <div class="success-message">
+
+            🎟️ Thank you for booking with MovieBook!
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>🎬 MovieBook</h3>
+
+    <p>
+        Online Movie Ticket Booking System
+    </p>
+
+    <p>
+        Developed using HTML, CSS and JavaScript
+    </p>
+
+    <p>
+        © 2026 MovieBook | College Project
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
